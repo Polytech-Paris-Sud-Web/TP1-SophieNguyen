@@ -11,7 +11,7 @@ import { ArticleService } from "./article.service";
 import { ArticleCreationComponent } from './article-creation/article-creation.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
-import { FilterByTitlePipe } from './home-articles/filter-by-title.pipe';
+import { FilterByTitlePipe } from './searchable-articles/filter-by-title.pipe';
 import { HomeArticlesComponent } from './home-articles/home-articles.component';
 import { SearchableArticlesComponent } from './searchable-articles/searchable-articles.component';
 import { AuthorComponent } from './author/author.component';

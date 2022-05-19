@@ -9,7 +9,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterByTitlePipe implements PipeTransform {
 
   transform(items: any[], text: string): any {
-    if (!items || !text || items.length > 0 && "title" in items[0]) {
+    if (!items || !text || items.length > 0 && !("title" in items[0])) {
       return items;
     }
 
