@@ -37,7 +37,8 @@ export class ArticleComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.fromRoute = /\/articles\/.+/g.test(this.router.url);
 
-    const id = Number(/\/articles\/(\d)/g.exec(this.router.url)?.[1]);
+    const id = Number(/\/articles\/(\d+)/g.exec(this.router.url)?.[1]);
+    console.log(id);
     if (id) {
       this.fetch(id);
     }

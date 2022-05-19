@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from "rxjs";
 import { AuthorService } from "../author.service";
 import { Router } from "@angular/router";
@@ -22,7 +22,7 @@ export class AuthorComponent implements OnInit, OnDestroy {
   constructor(private authorService: AuthorService, private router: Router) { }
 
   ngOnInit(): void {
-    const id = Number(/\/authors\/(\d)/g.exec(this.router.url)?.[1]);
+    const id = Number(/\/authors\/(\d+)/g.exec(this.router.url)?.[1]);
     if (id) {
       this.fetch(id);
     }
